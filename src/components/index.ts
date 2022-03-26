@@ -4,3 +4,4 @@ export * from "./login";
 export * from "./personalData";
 export * from "./productFilters";
 export * from "./products";
+export * from "./stlUploader";
