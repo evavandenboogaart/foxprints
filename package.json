@@ -6,25 +6,30 @@
   "scripts": {
     "build": "webpack --mode development",
     "build:production": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "start": "webpack serve --mode development --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^17.0.43",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
+    "csv-loader": "^3.0.3",
     "i18n": "^0.14.2",
     "lodash": "^4.17.21",
     "style-loader": "^3.3.1",
+    "typescript": "^4.6.3",
     "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "@types/react": "^17.0.43",
-    "csv-loader": "^3.0.3",
+    "file-system": "^2.2.2",
+    "html-webpack-plugin": "^5.5.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^4.6.3",
-    "xml-loader": "^1.2.1"
+    "react-dom": "^17.0.2"
   }
 }
