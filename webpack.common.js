@@ -3,7 +3,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.ts",
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
@@ -41,6 +41,7 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
+        include: path.resolve(__dirname, "src"),
         use: [
           {
             loader: "ts-loader",
