@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@emotion/react";
-import { Header, ProductFilters, Products, Footer } from "../components";
+import { Header, Footer, PersonalData } from "../components";
 import { Group } from "../components/shared/Group";
 
 const HomePage: React.VFC = () => {
@@ -8,10 +8,7 @@ const HomePage: React.VFC = () => {
   return (
     <Group gap={theme.spacing.$6}>
       <Header />
-      <Group>
-        <ProductFilters />
-        <Products />
-      </Group>
+      <PersonalData />
       <Footer />
     </Group>
   );
