@@ -1,7 +1,7 @@
 import { Theme } from "@emotion/react";
 import styled from "@emotion/styled";
 
-const variants = ["h1"];
+const variants = ["h1", "h2", "h3", "h4", "h5", "h6"];
 
 const webStyles = {
   bold: `
