@@ -13,8 +13,11 @@
   "author": "Eva van den Boogaart",
   "license": "ISC",
   "devDependencies": {
-    "@types/lodash": "^4.14.180",
     "@babel/core": "^7.17.8",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@types/react-dom": "^17.0.14",
+    "@types/lodash": "^4.14.180",
     "@types/react": "^17.0.43",
     "babel-loader": "^8.2.4",
     "copy-webpack-plugin": "^10.2.4",

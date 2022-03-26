@@ -1,11 +1,5 @@
-import * as _ from 'lodash';
+import React from "react";
+import ReactDOM from "react-dom";
+import HomePage from "./HomePage";
 
-function component() {
-  const element = document.createElement('div');
-
-  element.innerHTML = _.join(['Hello', 'test'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+ReactDOM.render(React.createElement(HomePage), document.getElementById('body'));

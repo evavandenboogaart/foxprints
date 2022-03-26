@@ -35,7 +35,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|tsx)$/,
         include: path.resolve(__dirname, "src"),
         loader: "babel-loader",
       },
@@ -77,5 +77,8 @@ module.exports = {
         use: ["xml-loader"],
       },
     ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
   },
 };
