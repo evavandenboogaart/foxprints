@@ -1,14 +1,14 @@
 import { ThemeProvider } from "@emotion/react";
 import React from "react";
-import { Text } from "./components/shared";
+import HomePage from "./pages/HomePage";
 import theme from "./theme.json";
 
-const HomePage: React.VFC = () => {
+const Root: React.VFC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Text variant="h1" isBold={false}>Test</Text>
+      <HomePage />
     </ThemeProvider>
   );
 }
 
-export default HomePage;
+export default Root;
