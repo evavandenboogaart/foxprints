@@ -20,17 +20,4 @@ const Text = styled.span<{ isBold?: boolean, variant?: string }>`
   ${({ isBold = false }) => isBold ? webStyles.bold : ""}
 `;
 
-
-(variant?: string, isBold?: boolean) => {
-  switch (variant) {
-    case "h1":
-      return 
-    default:
-      return styled.p`
-        ${webStyles.default}
-        ${isBold ? webStyles.bold : ""}
-      `;
-  }
-}
-
 export default Text;
