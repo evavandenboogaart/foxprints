@@ -1,20 +1,16 @@
 const path = require("path");
-const fs = require("file-system");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  // production ? mode prod
-  mode: "development",
   entry: "./src/index.js",
-  devtool: "inline-source-map",
-  devServer: {
-    static: "./dist",
-  },
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  resolve: {
+    symlinks: false,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -36,31 +32,47 @@ module.exports = {
       ],
     }),
   ],
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
   module: {
     rules: [
       {
+        test: /\.js$/,
+        include: path.resolve(__dirname, "src"),
+        loader: "babel-loader",
+      },
+      {
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/i,
+        include: path.resolve(__dirname, "src"),
         use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        include: path.resolve(__dirname, "src"),
         type: "asset/resource",
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        include: path.resolve(__dirname, "src"),
         type: "asset/resource",
       },
       {
         test: /\.(csv|tsv)$/i,
+        include: path.resolve(__dirname, "src"),
         use: ["csv-loader"],
       },
       {
         test: /\.xml$/i,
+        include: path.resolve(__dirname, "src"),
         use: ["xml-loader"],
       },
     ],
